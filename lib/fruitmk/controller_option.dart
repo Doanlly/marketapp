@@ -10,13 +10,13 @@ class Controller_option extends StatefulWidget {
   @override
   State<Controller_option> createState() => _Controller_optionState();
 }
-
+int currentindex = 0;
 class _Controller_optionState extends State<Controller_option> {
-  int currentindex = 0;
+
   static List<Widget> _widgetOptions = <Widget>[
     Fruitmarket(),
     Container(),
-    FavoriteScreen(),
+    FavoriteScreen(check: false,),
     MyAccountScreen(),
   ];
   @override

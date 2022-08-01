@@ -29,13 +29,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  favorite_button: ^0.0.4
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.2
   smooth_page_indicator: ^1.0.0+2
   flutter_rating_bar: 4.0.0
+
   #smooth_star_rating: 1.1.1
 dev_dependencies:
   flutter_test:
@@ -91,6 +92,7 @@ flutter:
     - assets/images/ic_shopping.png
     - assets/images/ic_edit.png
     - assets/images/ic_my_oder.png
+    - assets/images/ic_giaca1.png
     - assets/images/ic_favorite2.png
     - assets/images/ic_setting.png
     - assets/images/ic_mycart.png
@@ -105,6 +107,119 @@ flutter:
     - assets/images/ic_secure.png
     - assets/images/ic_delete1.png
     - assets/images/ic_delete2.png
+    - assets/images/ic_market.png
+    - assets/images/ic_gps1.png
+    - assets/images/ic_card.png
+    - assets/images/ic_matercard.png
+    - assets/images/ic_master2.png
+    - assets/images/ic_visa.png
+    - assets/images/ic_phonepay.png
+    - assets/images/ic_paypal.png
+    - assets/images/ic_ggpay.png
+    - assets/images/ic_line.png
+    - assets/images/ic_atmcard.png
+    - assets/images/ic_notfavorite.png
+    - assets/images/ic_favorites1.png
+    - assets/fruit/CAM1.jpg
+    - assets/fruit/gihangtraicay.jpg
+    - assets/fruit/giotraicay.jpg
+    - assets/fruit/goiquatraicay.jpg
+    - assets/fruit/goiquatraicay1.jpg
+    - assets/fruit/goiquatraicay2.jpg
+    - assets/fruit/hatde.jpg
+    - assets/fruit/hatde1.jpg
+    - assets/fruit/hạt cười.jpg
+    - assets/fruit/liaorange.jpg
+    - assets/fruit/manyfruit.jpg
+    - assets/fruit/melon-bingo.jpg
+    - assets/fruit/melon-duahau.jpg
+    - assets/fruit/melonduavang.jpg
+    - assets/fruit/nho.jpg
+    - assets/fruit/nhoden.jpg
+    - assets/fruit/nhothom.jpg
+    - assets/fruit/orange.jpg
+    - assets/fruit/orange1.jpg
+    - assets/fruit/papertraicaygiay.jpg
+    - assets/fruit/orange2.jpg
+    - assets/fruit/quadao-peaches.jpg
+    - assets/fruit/quaman.jpg
+    - assets/fruit/stone2.jpg
+    - assets/fruit/Stonefruit1.jpg
+    - assets/fruit/xoai.jpg
+    - assets/fruit/nhan.jpg
+    - assets/fruit/mit.jpeg
+    - assets/fruit/chuoi.jpg
+    - assets/fruit/vai.jpg
+    - assets/images/fvd/aanpaper.jpg
+    - assets/images/fvd/caibap.jpg
+    - assets/images/fvd/caibong.jpg
+    - assets/images/fvd/caithao.jpg
+    - assets/images/fvd/carot.jpg
+    - assets/images/fvd/carottim.jpg
+    - assets/images/fvd/cherry.jpg
+    - assets/images/fvd/cucaitrang.jpg
+    - assets/images/fvd/cudau.jpg
+    - assets/images/fvd/daokho.jpg
+    - assets/images/fvd/dautam.webp
+    - assets/images/fvd/dolac.jpg
+    - assets/images/fvd/dotuong.webp
+    - assets/images/fvd/doxanh.jpg
+    - assets/images/fvd/dua.jpg
+    - assets/images/fvd/goiraucu.jpeg
+    - assets/images/fvd/gung.jpg
+    - assets/images/fvd/hanhnhan.jpg
+    - assets/images/fvd/hanhtay.jpg
+    - assets/images/fvd/hanhtim.jpg
+    - assets/images/fvd/hatde1.jpg
+    - assets/images/fvd/hatdieu.jpg
+    - assets/images/fvd/hatocho.jpg
+    - assets/images/fvd/hatcuoi.jpg
+    - assets/images/fvd/khoai kang.webp
+    - assets/images/fvd/latiato.jpg
+    - assets/images/fvd/mango.jpg
+    - assets/images/fvd/mankho.jpg
+    - assets/images/fvd/mantau.jpg
+    - assets/images/fvd/mamxoi.jpg
+    - assets/images/fvd/mamxoiden.jpg
+    - assets/images/fvd/melon-duahau.jpg
+    - assets/images/fvd/melonduavang.jpg
+    - assets/images/fvd/mixeddry.webp
+    - assets/images/fvd/mixeddry1.webp
+    - assets/images/fvd/mixedry.jpg
+    - assets/images/fvd/nghe.jpg
+    - assets/images/fvd/nghexanh.jpg
+    - assets/images/fvd/nhieuhat.jpg
+    - assets/images/fvd/nhokho.jpg
+    - assets/images/fvd/oliu.webp
+    - assets/images/fvd/quamanz.jpg
+    - assets/images/fvd/raucu.jpg
+    - assets/images/fvd/raucu2.jpg
+    - assets/images/fvd/raucu3.jpg
+    - assets/images/fvd/rauma.jpg
+    - assets/images/fvd/raumui.jpg
+    - assets/images/fvd/raungot.webp
+    - assets/images/fvd/rauriep.jpg
+    - assets/images/fvd/stone2.jpg
+    - assets/images/fvd/sungtay.jpg
+    - assets/images/fvd/taotau.jpg
+    - assets/images/fvd/toi.jpg
+    - assets/images/fvd/toiden.jpg
+    - assets/images/fvd/vai.jpg
+    - assets/images/fvd/xoai.jpg
+    - assets/images/fvd/xoaido.jpg
+    - assets/images/fvd/doden.jpg
+    - assets/images/fvd/nhieuqua.jpg
+    - assets/images/fvd/nhieuqua1.jpg
+    - assets/images/fvd/nhieuqua2.jpg
+    - assets/images/fvd/nhieuqua3.jpg
+    - assets/images/fvd/nhieuqua4.jpg
+    - assets/images/fvd/quadao.jpg
+    - assets/images/fvd/mo.jpg
+    - assets/images/fvd/duale.jpg
+    - assets/images/fvd/duavang.jpg
+    - assets/images/fvd/duaech.jpg
+    - assets/images/fvd/bingo.jpg
+
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 

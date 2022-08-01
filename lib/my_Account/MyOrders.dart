@@ -21,7 +21,7 @@ class _MyOrderState extends State<MyOrder> {
         leading: IconButton(
         icon: Icon(Icons.arrow_back_ios_new_outlined,color: Colors.white,),
         onPressed: () {
-          Navigator.push(context,MaterialPageRoute(builder: (context)=>MyAccountScreen()));
+          Navigator.pop(context);
         // Do something.
         }),
       ),

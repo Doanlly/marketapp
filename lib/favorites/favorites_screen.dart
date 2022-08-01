@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/fruitmk/controller_option.dart';
 class FavoriteScreen extends StatefulWidget {
-  const FavoriteScreen({Key? key}) : super(key: key);
+  final bool check ;
+  FavoriteScreen({Key? key, required this.check}) : super(key: key);
 
   @override
   State<FavoriteScreen> createState() => _FavoriteScreenState();
@@ -8,15 +10,33 @@ class FavoriteScreen extends StatefulWidget {
 
 class _FavoriteScreenState extends State<FavoriteScreen> {
 
+
   @override
   Widget build(BuildContext context) {
+
+
     Size size = MediaQuery.of(context).size;
     return Scaffold(
-      appBar: AppBar(
-        automaticallyImplyLeading: false,
+      appBar: widget.check ? AppBar(
+
+        leading: IconButton(
+          onPressed: () {
+           Navigator.pop(context);
+          },
+          icon: Icon(
+            Icons.arrow_back_ios_new_outlined,
+            size: 22,
+            color: Colors.white,
+          ),
+        ),
         backgroundColor:Color.fromRGBO(105, 160, 58, 1),
         title: Text("Favorites",style: TextStyle(fontSize:15,color: Colors.white ),),
-      ),
+      ):AppBar(
+        backgroundColor:Color.fromRGBO(105, 160, 58, 1),
+        title: Text("Favorites",style: TextStyle(fontSize:15,color: Colors.white ),),
+        automaticallyImplyLeading: false,
+
+      ) ,
       body: Padding(
         padding: EdgeInsets.all(10),
         child: ListView(

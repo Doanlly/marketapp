@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import "package:flutter_app/my_Account/MyOrders.dart";
 import "package:flutter_app/favorites/favorites_screen.dart";
-import "package:flutter_app/my_Account/Help.dart";
-import "package:flutter_app/my_Account/LogOut.dart";
-import "package:flutter_app/my_Account/MyCarts.dart";
-import "package:flutter_app/my_Account/Rateus.dart";
-import "package:flutter_app/my_Account/ReferaFreind.dart";
 import "package:flutter_app/my_Account/Settings.dart";
+import "package:flutter_app/my_Account/help/helpp.dart";
+import 'package:flutter_app/shopping cart/shopping_cart.dart';
 class MyAccountScreen extends StatefulWidget {
   const MyAccountScreen({Key? key}) : super(key: key);
 
@@ -96,7 +93,7 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
                   height: size.height*0.07,
                   width: double.infinity,
                   child: TextButton(onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder:(context)=> FavoriteScreen()));
+                    Navigator.push(context, MaterialPageRoute(builder:(context)=> FavoriteScreen(check: true,)));
                   },
                       child: Row(
                         children: [
@@ -131,7 +128,9 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
                   color: Colors.white,
                   height: size.height*0.07,
                   width: double.infinity,
-                  child: TextButton(onPressed: (){},
+                  child: TextButton(onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> Shoppingcart()));
+                  },
                       child: Row(
                         children: [
                           SizedBox(width: 20,),
@@ -180,7 +179,9 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
                   color: Colors.white,
                   height: size.height*0.07,
                   width: double.infinity,
-                  child: TextButton(onPressed: (){},
+                  child: TextButton(onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context)=> Help()));
+                  },
                       child: Row(
                         children: [
                           SizedBox(width: 20,),
