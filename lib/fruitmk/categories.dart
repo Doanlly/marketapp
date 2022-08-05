@@ -17,7 +17,8 @@ class _CategoriesState extends State<Categories> with TickerProviderStateMixin {
     Size size = MediaQuery.of(context).size;
     TabController _tabcontroller = TabController(length: 3, vsync: this);
     return Container(
-      height: size.height * 0.735,
+     // color: Colors.amber,
+      height: size.height * 0.77,
       //color: Colors.red,
       child: Column(
         //mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -81,7 +82,7 @@ class _CategoriesState extends State<Categories> with TickerProviderStateMixin {
           ),
           Container(
             width: double.infinity,
-            height: size.height * 0.645,
+            height: size.height * 0.705,
             //color: Colors.green,
             child: TabBarView(controller: _tabcontroller, children: [
               Stack(
