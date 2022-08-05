@@ -15,18 +15,17 @@ class Page3 extends StatelessWidget {
               width: double.infinity,
             ),
             const Padding(
-              padding:  EdgeInsets.only(left: 330),
+              padding: EdgeInsets.only(left: 330),
               child: SizedBox(
-               height: 50,
+                height: 50,
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(top:70),
+              padding: const EdgeInsets.only(top: 70),
               child: SizedBox(
                 height: 195,
                 width: 340,
                 child: SizedBox(
-
                   width: MediaQuery.of(context).size.width,
                   //width: 300,
                   child: Container(
@@ -38,21 +37,27 @@ class Page3 extends StatelessWidget {
                     ),
                   ),
                 ),
-              ),//Image.asset("assets/images/page1_1.png"),
+              ), //Image.asset("assets/images/page1_1.png"),
             ),
             Padding(
               padding: const EdgeInsets.only(top: 88),
               child: Center(
                 child: Column(
                   children: [
-
-                    const Text("Delivery Arrived",
-                      style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600,color: Color.fromRGBO(47, 46, 65, 1),
+                    const Text(
+                      "Delivery Arrived",
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600,
+                        color: Color.fromRGBO(47, 46, 65, 1),
                         fontFamily: "Poppins",
-                      ),),
+                      ),
+                    ),
                     const Padding(padding: EdgeInsets.only(top: 20)),
-                    const Text("Order is arrived at your Place",
-                      style: TextStyle(fontSize: 15,
+                    const Text(
+                      "Order is arrived at your Place",
+                      style: TextStyle(
+                          fontSize: 15,
                           color: Color.fromRGBO(120, 120, 124, 0.4),
                           fontFamily: "Poppins"),
                     ),

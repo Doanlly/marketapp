@@ -4,6 +4,7 @@ import "package:flutter_app/favorites/favorites_screen.dart";
 import "package:flutter_app/my_Account/Settings.dart";
 import "package:flutter_app/my_Account/help/helpp.dart";
 import 'package:flutter_app/shopping cart/shopping_cart.dart';
+
 class MyAccountScreen extends StatefulWidget {
   const MyAccountScreen({Key? key}) : super(key: key);
 
@@ -21,232 +22,371 @@ class _MyAccountScreenState extends State<MyAccountScreen> {
           Container(
             color: Color.fromRGBO(105, 160, 58, 1),
             width: double.infinity,
-            height: size.height * 0.3,
+            height: size.height * 0.35,
             child: Column(
               children: <Widget>[
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(width: 35,),
+                    Container(
+                      width: 35,
+                    ),
                     Padding(
-                      padding: EdgeInsets.only(top: size.height*0.07,),
+                      padding: EdgeInsets.only(
+                        top: size.height * 0.07,
+                      ),
                       child: Container(
                         height: size.width * 0.28,
                         width: size.width * 0.28,
-                            child: Center(child: Image.asset("assets/images/ic_us.png",fit: BoxFit.fill,)),
+                        child: Center(
+                            child: Image.asset(
+                          "assets/images/ic_us.png",
+                          fit: BoxFit.fill,
+                        )),
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(right: 15.0,top: 20),
+                      padding: const EdgeInsets.only(right: 15.0, top: 20),
                       child: Container(
                         child: ImageIcon(
-                            AssetImage("assets/images/ic_edit.png"),color: Colors.white,),
+                          AssetImage("assets/images/ic_edit.png"),
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                   ],
                 ),
-                Text("Manish Chutake",style: TextStyle(fontSize: 17,color: Colors.white,fontWeight: FontWeight.w600),),
+                Text(
+                  "Manish Chutake",
+                  style: TextStyle(
+                      fontSize: 17,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600),
+                ),
                 Padding(
                   padding: const EdgeInsets.all(5.0),
-                  child: Text("manushuxuld@gmail.com",style: TextStyle(fontSize: 14,color: Colors.white,fontWeight: FontWeight.w600),),
+                  child: Text(
+                    "manushuxuld@gmail.com",
+                    style: TextStyle(
+                        fontSize: 14,
+                        color: Colors.white,
+                        fontWeight: FontWeight.w600),
+                  ),
                 )
               ],
             ),
           ),
 
           Container(
-            height: size.height*0.7,
+            height: size.height * 0.659,
             width: double.infinity,
             color: Colors.white,
             child: ListView(
+              scrollDirection: Axis.vertical,
+              shrinkWrap: true,
               children: [
                 Container(
-                  height: size.height*0.07,
+                  height: size.height * 0.07,
                   width: double.infinity,
                   color: Colors.white,
-                  child: Column(
-                    children: [
-                      TextButton(onPressed: (){
-                        Navigator.push(context, MaterialPageRoute(builder: (context)=> MyOrder()),);
-                      },
-                          child: Column(
-                            children: [
-                              Row(
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        TextButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => MyOrder()),
+                              );
+                            },
+                            child: SingleChildScrollView(
+                              child: Column(
                                 children: [
-                                  SizedBox(width: 20,),
-                                  ImageIcon(AssetImage("assets/images/ic_my_oder.png"),color: Color.fromRGBO(105, 160, 58, 1),),
-                                  SizedBox(width: 10,),
-                                  Text("My Orders",style: TextStyle(color: Colors.black,fontSize:15 ),),
-
+                                  Row(
+                                    children: [
+                                      SizedBox(
+                                        width: 20,
+                                      ),
+                                      ImageIcon(
+                                        AssetImage("assets/images/ic_my_oder.png"),
+                                        color: Color.fromRGBO(105, 160, 58, 1),
+                                      ),
+                                      SizedBox(
+                                        width: 10,
+                                      ),
+                                      Text(
+                                        "My Orders",
+                                        style: TextStyle(
+                                            color: Colors.black, fontSize: 15),
+                                      ),
+                                    ],
+                                  ),
                                 ],
                               ),
-
-                            ],
-                          )),
-                    ],
+                            )),
+                      ],
+                    ),
                   ),
-
                 ),
-                Container(height: 1,width: double.infinity,color: Color.fromRGBO(209, 209, 209, 1)),
+                Container(
+                    height: 1,
+                    width: double.infinity,
+                    color: Color.fromRGBO(209, 209, 209, 1)),
                 Container(
                   color: Colors.white,
-                  height: size.height*0.07,
+                  height: size.height * 0.07,
                   width: double.infinity,
-                  child: TextButton(onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder:(context)=> FavoriteScreen(check: true,)));
-                  },
+                  child: TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => FavoriteScreen(
+                                      check: true,
+                                    )));
+                      },
                       child: Row(
                         children: [
-                          SizedBox(width: 20,),
-                          ImageIcon(AssetImage("assets/images/ic_favorite2.png"),color: Color.fromRGBO(105, 160, 58, 1),),
-                          SizedBox(width: 10,),
-                          Text("Favorites",style: TextStyle(color: Colors.black,fontSize:15 ),),
+                          SizedBox(
+                            width: 20,
+                          ),
+                          ImageIcon(
+                            AssetImage("assets/images/ic_favorite2.png"),
+                            color: Color.fromRGBO(105, 160, 58, 1),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            "Favorites",
+                            style: TextStyle(color: Colors.black, fontSize: 15),
+                          ),
                         ],
                       )),
-
                 ),
-                Container(height: 1,width: double.infinity,color: Color.fromRGBO(209, 209, 209, 1)),
+                Container(
+                    height: 1,
+                    width: double.infinity,
+                    color: Color.fromRGBO(209, 209, 209, 1)),
                 Container(
                   color: Colors.white,
-                  height: size.height*0.07,
+                  height: size.height * 0.07,
                   width: double.infinity,
-                  child: TextButton(onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=> Settings()));
-                  },
+                  child: TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Settings()));
+                      },
                       child: Row(
                         children: [
-                          SizedBox(width: 20,),
-                          ImageIcon(AssetImage("assets/images/ic_setting.png"),color: Color.fromRGBO(105, 160, 58, 1),),
-                          SizedBox(width: 10,),
-                          Text("Settings",style: TextStyle(color: Colors.black,fontSize:15 ),),
+                          SizedBox(
+                            width: 20,
+                          ),
+                          ImageIcon(
+                            AssetImage("assets/images/ic_setting.png"),
+                            color: Color.fromRGBO(105, 160, 58, 1),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            "Settings",
+                            style: TextStyle(color: Colors.black, fontSize: 15),
+                          ),
                         ],
                       )),
-
                 ),
-                Container(height: 1,width: double.infinity,color: Color.fromRGBO(209, 209, 209, 1)),
+                Container(
+                    height: 1,
+                    width: double.infinity,
+                    color: Color.fromRGBO(209, 209, 209, 1)),
                 Container(
                   color: Colors.white,
-                  height: size.height*0.07,
+                  height: size.height * 0.07,
                   width: double.infinity,
-                  child: TextButton(onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=> Shoppingcart()));
-                  },
+                  child: TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Shoppingcart()));
+                      },
                       child: Row(
                         children: [
-                          SizedBox(width: 20,),
-                          ImageIcon(AssetImage("assets/images/ic_mycart.png"),color: Color.fromRGBO(105, 160, 58, 1),),
-                          SizedBox(width: 10,),
-                          Text("My Carts",style: TextStyle(color: Colors.black,fontSize:15 ),),
+                          SizedBox(
+                            width: 20,
+                          ),
+                          ImageIcon(
+                            AssetImage("assets/images/ic_mycart.png"),
+                            color: Color.fromRGBO(105, 160, 58, 1),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            "My Carts",
+                            style: TextStyle(color: Colors.black, fontSize: 15),
+                          ),
                         ],
                       )),
-
                 ),
-                Container(height: 1,width: double.infinity,color: Color.fromRGBO(209, 209, 209, 1)),
+                Container(
+                    height: 1,
+                    width: double.infinity,
+                    color: Color.fromRGBO(209, 209, 209, 1)),
                 Container(
                   color: Colors.white,
-                  height: size.height*0.07,
+                  height: size.height * 0.07,
                   width: double.infinity,
-                  child: TextButton(onPressed: (){},
+                  child: TextButton(
+                      onPressed: () {},
                       child: Row(
                         children: [
-                          SizedBox(width: 20,),
-                          ImageIcon(AssetImage("assets/images/ic_rateus.png"),color: Color.fromRGBO(105, 160, 58, 1),),
-                          SizedBox(width: 10,),
-                          Text("Rate us",style: TextStyle(color: Colors.black,fontSize:15 ),),
+                          SizedBox(
+                            width: 20,
+                          ),
+                          ImageIcon(
+                            AssetImage("assets/images/ic_rateus.png"),
+                            color: Color.fromRGBO(105, 160, 58, 1),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            "Rate us",
+                            style: TextStyle(color: Colors.black, fontSize: 15),
+                          ),
                         ],
                       )),
-
                 ),
-                Container(height: 1,width: double.infinity,color: Color.fromRGBO(209, 209, 209, 1)),
                 Container(
-                  height: size.height*0.07,
+                    height: 1,
+                    width: double.infinity,
+                    color: Color.fromRGBO(209, 209, 209, 1)),
+                Container(
+                  height: size.height * 0.07,
                   width: double.infinity,
                   color: Colors.white,
-                  child: TextButton(onPressed: (){},
+                  child: TextButton(
+                      onPressed: () {},
                       child: Row(
                         children: [
-                          SizedBox(width: 20,),
-                          ImageIcon(AssetImage("assets/images/ic_share.png"),color: Color.fromRGBO(105, 160, 58, 1),),
-                          SizedBox(width: 10,),
-                          Text("Refer a Friend",style: TextStyle(color: Colors.black,fontSize:15 ),),
+                          SizedBox(
+                            width: 20,
+                          ),
+                          ImageIcon(
+                            AssetImage("assets/images/ic_share.png"),
+                            color: Color.fromRGBO(105, 160, 58, 1),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            "Refer a Friend",
+                            style: TextStyle(color: Colors.black, fontSize: 15),
+                          ),
                         ],
                       )),
-
                 ),
-                Container(height: 1,width: double.infinity,color: Color.fromRGBO(209, 209, 209, 1)),
-
+                Container(
+                    height: 1,
+                    width: double.infinity,
+                    color: Color.fromRGBO(209, 209, 209, 1)),
                 Container(
                   color: Colors.white,
-                  height: size.height*0.07,
+                  height: size.height * 0.07,
                   width: double.infinity,
-                  child: TextButton(onPressed: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context)=> Help()));
-                  },
+                  child: TextButton(
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => Help()));
+                      },
                       child: Row(
                         children: [
-                          SizedBox(width: 20,),
-                          ImageIcon(AssetImage("assets/images/ic_help.png"),color: Color.fromRGBO(105, 160, 58, 1),),
-                          SizedBox(width: 10,),
-                          Text("Help",style: TextStyle(color: Colors.black,fontSize:15 ),),
+                          SizedBox(
+                            width: 20,
+                          ),
+                          ImageIcon(
+                            AssetImage("assets/images/ic_help.png"),
+                            color: Color.fromRGBO(105, 160, 58, 1),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            "Help",
+                            style: TextStyle(color: Colors.black, fontSize: 15),
+                          ),
                         ],
                       )),
-
                 ),
-                Container(height: 1,width: double.infinity,color: Color.fromRGBO(209, 209, 209, 1)),
+                Container(
+                    height: 1,
+                    width: double.infinity,
+                    color: Color.fromRGBO(209, 209, 209, 1)),
                 Container(
                   color: Colors.white,
-                  height: size.height*0.07,
+                  height: size.height * 0.07,
                   width: double.infinity,
-                  child: TextButton(onPressed: (){},
+                  child: TextButton(
+                      onPressed: () {},
                       child: Row(
                         children: [
-                          SizedBox(width: 20,),
-                          ImageIcon(AssetImage("assets/images/ic_logout.png"),color: Color.fromRGBO(105, 160, 58, 1),),
-                          SizedBox(width: 10,),
-                          Text("Log Out",style: TextStyle(color: Colors.black,fontSize:15 ),),
+                          SizedBox(
+                            width: 20,
+                          ),
+                          ImageIcon(
+                            AssetImage("assets/images/ic_logout.png"),
+                            color: Color.fromRGBO(105, 160, 58, 1),
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text(
+                            "Log Out",
+                            style: TextStyle(color: Colors.black, fontSize: 15),
+                          ),
                         ],
                       )),
-
                 ),
-
-
               ],
             ),
           ),
 
-
-
-         // Container(
-         //   color: Colors.red,
-         //   child: Expanded(
-         //     child: ListView(
-         //        children: [
-         //          Row(
-         //            children: [
-         //              Container(
-         //                // height: size.height*0.12,
-         //                // width: double.infinity,
-         //                // color: Colors.black,
-         //                child: ElevatedButton(onPressed: (){}, child:
-         //                  Row(
-         //                    children: <Widget>[
-         //                      ImageIcon(AssetImage("assets/images/ic_my_oder.png"),color: Color.fromRGBO(105, 160, 58, 1),),
-         //                      Text("My Orders",style: TextStyle(color: Colors.black,fontSize:15 ),)
-         //
-         //                    ],
-         //
-         //                  ),
-         //                ),
-         //              ),
-         //              //SizedBox(height: 1,width: double.infinity,),
-         //            ],
-         //          ),
-         //
-         //        ],
-         //
-         //      ),
-         //   ),
-         // ),
+          // Container(
+          //   color: Colors.red,
+          //   child: Expanded(
+          //     child: ListView(
+          //        children: [
+          //          Row(
+          //            children: [
+          //              Container(
+          //                // height: size.height*0.12,
+          //                // width: double.infinity,
+          //                // color: Colors.black,
+          //                child: ElevatedButton(onPressed: (){}, child:
+          //                  Row(
+          //                    children: <Widget>[
+          //                      ImageIcon(AssetImage("assets/images/ic_my_oder.png"),color: Color.fromRGBO(105, 160, 58, 1),),
+          //                      Text("My Orders",style: TextStyle(color: Colors.black,fontSize:15 ),)
+          //
+          //                    ],
+          //
+          //                  ),
+          //                ),
+          //              ),
+          //              //SizedBox(height: 1,width: double.infinity,),
+          //            ],
+          //          ),
+          //
+          //        ],
+          //
+          //      ),
+          //   ),
+          // ),
         ],
       ),
     );

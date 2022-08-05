@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class Help extends StatefulWidget {
   const Help({Key? key}) : super(key: key);
 
@@ -12,15 +13,24 @@ class _HelpState extends State<Help> {
     Size size = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(onPressed: (){
-          Navigator.pop(context);
-        },
-            icon: Icon(Icons.arrow_back_ios_new,size: 20,color: Colors.white,)) ,
-        backgroundColor:  Color.fromRGBO(105, 160, 58, 1),
-        title: Text("Help",style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.w600),),
+        leading: IconButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            icon: Icon(
+              Icons.arrow_back_ios_new,
+              size: 20,
+              color: Colors.white,
+            )),
+        backgroundColor: Color.fromRGBO(105, 160, 58, 1),
+        title: Text(
+          "Help",
+          style: TextStyle(
+              color: Colors.white, fontSize: 15, fontWeight: FontWeight.w600),
+        ),
       ),
       body: Container(
-        height: size.height*0.8,
+        height: size.height * 0.8,
         //color: Colors.greenAccent,
         width: size.width,
         alignment: Alignment.center,
@@ -28,7 +38,8 @@ class _HelpState extends State<Help> {
           padding: const EdgeInsets.all(22.0),
           child: Align(
             alignment: Alignment.topLeft,
-            child: Text("""
+            child: Text(
+              """
 Lorem Ipsum is simply dummy text of the printing 
 and typesetting industry. Lorem Ipsum has been 
 the industry’s standard dummy text ever since the 
@@ -54,7 +65,8 @@ Lorem Ipsum passages, and more recently with
 desktop publishing software like Aldus PageMaker 
 including versions of Lorem Ipsum.
             """,
-            style: TextStyle(fontSize:15.0 ),),
+              style: TextStyle(fontSize: 15.0),
+            ),
           ),
         ),
       ),

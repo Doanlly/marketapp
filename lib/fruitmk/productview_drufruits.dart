@@ -1,13 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/fruitmk/Product_fruit.dart';
-import 'package:flutter_app/fruitmk/detail.dart';
-import 'package:flutter_app/fruitmk/detail1.dart';
-import 'package:flutter_app/fruitmk/itemcard.dart';
-import 'package:flutter_app/fruitmk/detail2.dart';
-import 'package:flutter_app/fruitmk/mixed-itemcard.dart';
-import 'package:flutter_app/fruitmk/itemcard_stonefuirt.dart';
-import 'package:flutter_app/fruitmk/itemcard_melons.dart';
-import 'package:flutter_app/fruitmk/detail3.dart';
 import 'package:flutter_app/fruitmk/detail_d_1.dart';
 import 'package:flutter_app/fruitmk/itemcard_dryfruits_indehiscen.dart';
 import 'package:flutter_app/fruitmk/detail_d_2.dart';
@@ -16,6 +8,7 @@ import 'package:flutter_app/fruitmk/detail_d_3.dart';
 import 'package:flutter_app/fruitmk/detail_d_4.dart';
 import 'package:flutter_app/fruitmk/itemcard_kashmiridry.dart';
 import 'package:flutter_app/fruitmk/itemcard_dehiscentdryfruits.dart';
+
 class ProductscreenDryFruits extends StatefulWidget {
   const ProductscreenDryFruits({Key? key}) : super(key: key);
 
@@ -90,7 +83,7 @@ class _ProductscreenDryFruitsState extends State<ProductscreenDryFruits> {
           ],
         ),
         Padding(
-          padding: EdgeInsets.only(top: 10),
+          padding: EdgeInsets.only(top: 0),
           child: Align(
             alignment: Alignment.bottomLeft,
             child: RichText(
@@ -125,7 +118,7 @@ class _ProductscreenDryFruitsState extends State<ProductscreenDryFruits> {
             //Itemcard(),
             Expanded(
                 child: Container(
-              height: 250,
+              height: 240,
               //width:20,
               //color: Colors.lightGreen,
               child: GridView.builder(
@@ -199,7 +192,7 @@ class _ProductscreenDryFruitsState extends State<ProductscreenDryFruits> {
                     childAspectRatio: 2,
                     //crossAxisSpacing: 2,
                   ),
-                  itemBuilder: (context, index) =>ItemcarddehiscentDF(
+                  itemBuilder: (context, index) => ItemcarddehiscentDF(
                         press: () {
                           Navigator.push(
                               context,
@@ -207,7 +200,7 @@ class _ProductscreenDryFruitsState extends State<ProductscreenDryFruits> {
                                   builder: (context) => DetailscreenD4(
                                       dehiscentdf: dehiscentdf[index])));
                         },
-                        dehiscentdfz:dehiscentdf[index],
+                        dehiscentdfz: dehiscentdf[index],
                       )),
             ))
           ],
@@ -263,8 +256,8 @@ class _ProductscreenDryFruitsState extends State<ProductscreenDryFruits> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) =>DetailscreenD5(
-                                       kashmiri: kashmiridf[index],
+                                  builder: (context) => DetailscreenD5(
+                                        kashmiri: kashmiridf[index],
                                       )));
                         },
                         kashmiridfs: kashmiridf[index],

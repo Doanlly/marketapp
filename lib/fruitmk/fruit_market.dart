@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/fruitmk/categories.dart';
 import 'package:flutter_app/fruitmk/notificationz.dart';
 import 'package:flutter_app/fruitmk/productview.dart';
-import 'package:flutter_app/fruitmk/Product_fruit.dart';
-import 'package:flutter_app/test.dart';
+
 class Fruitmarket extends StatefulWidget {
   const Fruitmarket({Key? key}) : super(key: key);
 
@@ -51,7 +50,6 @@ class _FruitmarketState extends State<Fruitmarket> {
         actions: <Widget>[
           IconButton(
               onPressed: () {
-                print("tong sanpham: ${tongsanpham}");
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => Notificationz()));
               },
@@ -73,10 +71,9 @@ class _FruitmarketState extends State<Fruitmarket> {
                   child: Column(
                     children: [
                       SizedBox(
-                        height: size.height*0.05,
+                        height: size.height * 0.05,
                       ),
                       Categories(),
-
                     ],
                   ),
                 ),
@@ -88,11 +85,10 @@ class _FruitmarketState extends State<Fruitmarket> {
             width: double.infinity,
             color: Color.fromRGBO(105, 160, 58, 1),
           ),
-         Padding(
+          Padding(
             padding: const EdgeInsets.only(left: 8.0, right: 8.0),
             child: Card(
               child: TextField(
-
                 textAlignVertical: TextAlignVertical.center,
                 textAlign: TextAlign.left,
                 style: TextStyle(
@@ -101,7 +97,10 @@ class _FruitmarketState extends State<Fruitmarket> {
                 decoration: InputDecoration(
                   border: InputBorder.none,
                   hintText: "Search",
-                  hintStyle: TextStyle(fontSize: 14.5,fontWeight: FontWeight.w500,color: Colors.black38),
+                  hintStyle: TextStyle(
+                      fontSize: 14.5,
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black38),
                   // label: Text("Search",style: TextStyle(color: Colors.black12,fontSize: 14,),),
                   prefixIcon: IconButton(
                       icon: Icon(
@@ -119,4 +118,3 @@ class _FruitmarketState extends State<Fruitmarket> {
     );
   }
 }
-

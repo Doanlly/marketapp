@@ -75,7 +75,8 @@ class _PlaceOrderState extends State<PlaceOrder> {
                                                 "Organic Fruit Shop",
                                                 style: TextStyle(
                                                     fontSize: 17,
-                                                    fontWeight: FontWeight.w600),
+                                                    fontWeight:
+                                                        FontWeight.w600),
                                               )),
                                         ),
                                         Container(
@@ -180,7 +181,6 @@ class _PlaceOrderState extends State<PlaceOrder> {
                         ),
                       ]),
                     ),
-                  
                   ],
                 ),
               ),
@@ -296,7 +296,8 @@ class _PlaceOrderState extends State<PlaceOrder> {
                           alignment: Alignment.topLeft,
                           child: Text(
                             "Save and Pay via cards",
-                            style: TextStyle(fontSize: 12, color: Colors.black26),
+                            style:
+                                TextStyle(fontSize: 12, color: Colors.black26),
                           ),
                         ),
                       ),

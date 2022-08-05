@@ -22,11 +22,11 @@ class _CategoriesState extends State<Categories> with TickerProviderStateMixin {
       child: Column(
         //mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          SizedBox( height: size.height*0.02),
+          SizedBox(height: size.height * 0.021),
           Container(
             //color: Colors.amber,
             padding: EdgeInsets.only(left: 20, right: 20),
-            height: 30,//size.height*0.0375,
+            height: 30, //size.height*0.0375,
             child: Align(
               alignment: Alignment.bottomLeft,
               child: TabBar(

@@ -1,24 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/fruitmk/categories.dart';
 import 'package:flutter_app/fruitmk/Product_fruit.dart';
 import 'dart:math';
 import 'package:flutter_app/favorites/favorites_screen.dart';
 
 Random random = new Random();
 
-class Itemcard extends StatefulWidget  {
-  var press;
-  Itemcard({Key? key, required this.produc, required this.press})
+class Mixedtemcard extends StatefulWidget {
+  Mixedtemcard({Key? key, required this.mixed, required this.press})
       : super(key: key);
-  final Product produc;
-  //get press => null;
-  //Function press;
-  bool checkfavorrite = true;
+  MixedFruits mixed;
+  var press;
+
   @override
-  State<Itemcard> createState() => _ItemcardState();
+  State<Mixedtemcard> createState() => _MixedtemcardState();
 }
 
-class _ItemcardState extends State<Itemcard> {
-
+class _MixedtemcardState extends State<Mixedtemcard> {
+  bool checkfavorrite1 = true;
   int randomNumber = random.nextInt(3) + 2;
   @override
   Widget build(BuildContext context) {
@@ -37,7 +36,7 @@ class _ItemcardState extends State<Itemcard> {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(10.0),
                   child: Image.asset(
-                    widget.produc.image,
+                    widget.mixed.image,
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -57,19 +56,20 @@ class _ItemcardState extends State<Itemcard> {
                         onTap: () {
                           setState(() {
                             print("click");
-                            widget.checkfavorrite = !widget.checkfavorrite;
+                            checkfavorrite1 = !checkfavorrite1;
                           });
-                          if (widget.checkfavorrite == false) {
-                            setidf.add("${widget.produc.id}");
+                          if (checkfavorrite1 == false) {
+                            setidf.add("${widget.mixed.id}");
                             //print("${Listitemproduc}");
                             print("setid: ${setidf}");
                             for (int i = 0; i < setidf.length; i++) {
-                              for (int j = 0; j < listproduct.length; j++) {
-                                if (setidf[i] == "${listproduct[j].id}") {
-                                  savedataproductf.add(listproduct[j].title);
-                                  savedataproductf.add(listproduct[j].price);
-                                  savedataproductf.add(listproduct[j].image);
-                                  savedataproductf.add(listproduct[j].check);
+                              for (int j = 0; j < mfruits.length; j++) {
+                                if (setidf[i] == "${mfruits[j].id}") {
+                                  savedataproductf.add(mfruits[j].title);
+                                  savedataproductf.add(mfruits[j].price);
+                                  savedataproductf.add(mfruits[j].image);
+                                  savedataproductf
+                                      .add(mfruits[j].phanloai);
                                 }
                               }
                             }
@@ -164,14 +164,12 @@ class _ItemcardState extends State<Itemcard> {
                             savedataproductf.clear();
                             sumidf = 0;
                           }
-                          // Navigator.push(context, MaterialPageRoute(builder: (context)
-                          // => FavoriteScreen(check: true)));
                         },
                         child: Align(
                             alignment: Alignment.center,
                             child: Container(
                                 child: Image.asset(
-                              widget.checkfavorrite
+                              checkfavorrite1
                                   ? "assets/images/ic_notfavorite.png"
                                   : "assets/images/ic_favorites1.png",
                               fit: BoxFit.contain,
@@ -191,6 +189,7 @@ class _ItemcardState extends State<Itemcard> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 //SizedBox(height: 15,),
+                //SizedBox(height: 15,),
                 for (int i = 1; i <= randomNumber; i++)
                   Icon(
                     Icons.star,
@@ -203,7 +202,6 @@ class _ItemcardState extends State<Itemcard> {
                     size: 17,
                     color: Colors.black38,
                   ),
-
                 //SizedBox(width: 150,)
               ],
             ),
@@ -211,18 +209,20 @@ class _ItemcardState extends State<Itemcard> {
           Align(
               alignment: Alignment.bottomLeft,
               child: Text(
-                widget.produc.title,
+                widget.mixed.title,
                 style: TextStyle(fontSize: 15, fontWeight: FontWeight.w600),
               )),
           Padding(
             padding: const EdgeInsets.only(top: 5),
-            child: Row(children: [
-              Image.asset("assets/images/ic_giaca.png"),
-              Text(
-                "${widget.produc.price} Per/ kg",
-                style: TextStyle(fontSize: 12),
-              )
-            ]),
+            child: Row(
+              children: [
+                Image.asset("assets/images/ic_giaca.png"),
+                Text(
+                  "${widget.mixed.price} Per/kg",
+                  style: TextStyle(fontSize: 12),
+                )
+              ],
+            ),
           ),
         ],
       ),

@@ -12,7 +12,7 @@ class NameandAds extends StatefulWidget {
 class _NameandAdsState extends State<NameandAds> {
   @override
   Widget build(BuildContext context) {
-    Size size =  MediaQuery.of(context).size;
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Container(
@@ -85,7 +85,7 @@ class _NameandAdsState extends State<NameandAds> {
                 ),
               ),
               SizedBox(
-                height: size.height*0.05,
+                height: size.height * 0.05,
               ),
               Container(
                 height: 60,
