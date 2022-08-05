@@ -267,7 +267,7 @@ class _NotificationState extends State<Notificationz> {
                                       ),
                                       Padding(
                                         padding:
-                                            const EdgeInsets.only(left: 15),
+                                            const EdgeInsets.only(left: 17),
                                         child: Align(
                                             alignment: Alignment.topLeft,
                                             child: Text(
@@ -454,7 +454,7 @@ class _NotificationState extends State<Notificationz> {
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.only(
-                                            top: 8, left: 15),
+                                            top:5, left: 15),
                                         child: Align(
                                             alignment: Alignment.topLeft,
                                             child: Text(
