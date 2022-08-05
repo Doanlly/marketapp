@@ -238,7 +238,7 @@ class _PlaceOrderState extends State<PlaceOrder> {
                             width: 40,
                           ),
                           Container(
-                            height: size.width * 0.1,
+                            height: size.width * 0.09,
                             width: size.width * 0.8,
                             //color: Colors.lightGreen,
 

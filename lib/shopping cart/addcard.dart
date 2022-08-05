@@ -80,7 +80,7 @@ class _AddUcardState extends State<AddUcard> {
                       ),
                     ),
                     SizedBox(
-                      height: size.height * 0.02,
+                      height: size.height * 0.00,
                     ),
                     Container(
                       height: size.height * 0.035,
