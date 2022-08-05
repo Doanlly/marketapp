@@ -4,7 +4,7 @@ Xây dựng giao diện app và một vài chức năng hiển thị
 
 ## Người thực hiện: Nguyễn Văn Đoàn- 19000412
 
-## Một số vấn đề đã và đang giải quyết
+## Một số vấn đề đã đang và sẽ giải quyết
 Thêm sản phẩm vào Shopping cart, lưu sản phẩm yêu thích(chưa lưu trạng thái thích sau khi mở lại), chưa cập nhất giá, số thêm bớt sản phẩm trong shopping cart, chưa thực hiện tạo chức năng nhập SDT  ở màn đăng nhập, mới tìm hiểu cách tichshopwj filbase vào Flutter.
 Giao diện app phù hợp màn trên 5.6 inch
 
